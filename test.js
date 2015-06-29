@@ -25,7 +25,7 @@ describe('Blog with mongo:', function(){
 		removeAll(done);
 	});
 
-	var test_post  = { title: 'A nice title', body : 'Short body. Yeah!'};
+	var test_post = { title: 'A nice title', body : 'Short body. Yeah!'};
 
 
 	it('creates a new post', function(done){
@@ -43,8 +43,9 @@ describe('Blog with mongo:', function(){
 			request
 				.get('/post/' + post._id)
 				.expect('Content-Type', /text/)
-	      		.expect(200);
-	    })(done);
+				.expect(200)
+				.end(done);
+		})();
 	});
 
 	it('renders view page for a number of posts', function(done){
@@ -56,8 +57,9 @@ describe('Blog with mongo:', function(){
 			request
 				.get('/')
 				.expect('Content-Type', /text/)
-	      		.expect(200);
-	    })(done);
+				.expect(200)
+				.end(done);
+		})();
 	});
 
 	it('updates an existing post', function(done){
@@ -68,8 +70,9 @@ describe('Blog with mongo:', function(){
 				.post(postUrl)
 				.send({title: 'Updated title', body: 'Updated body'})
 				.expect(302)
-				.expect('location', postUrl);
-	    })(done);
+				.expect('location', postUrl)
+				.end(done);
+		})();
 	});
 
 	it('deletes an existing post', function(done){
@@ -80,7 +83,8 @@ describe('Blog with mongo:', function(){
 			request
 				.get(deleteUrl)
 				.expect(302)
-				.expect('location', '/');
-	    })(done);
+				.expect('location', '/')
+				.end(done);
+		})();
 	});
 });
