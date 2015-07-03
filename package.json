@@ -16,7 +16,6 @@
     "co-monk":"^1.0.0"
   },
   "devDependencies": {
-    "co": "*",
     "mocha": "*",
     "should": "*",
     "supertest": "*"
