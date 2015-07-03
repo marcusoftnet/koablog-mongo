@@ -13,16 +13,16 @@
     "koa-route": "^1.0.2",
     "swig": "^1.2.2",
     "monk": "^0.8.1",
-    "co-monk":"^1.0.0"
+    "co-monk": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*",
-    "supertest": "*"
+    "mocha": "^2.2.5",
+    "should": "^7.0.1",
+    "supertest": "^1.0.1"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --harmony-generators test.js -u bdd -R spec",
-    "start" : "node --harmony index.js"
+    "start": "node --harmony index.js"
   },
   "engines": {
     "node": ">= 11.3"
