@@ -5,15 +5,15 @@
   "repository": "https://github.com/marcusoftnet/koablog-mongo",
   "bugs": "https://github.com/marcusoftnet/koablog-mongo/issues",
   "dependencies": {
-    "co": "^3.0.0",
-    "co-body": "0.0.1",
-    "co-views": "^0.1.0",
-    "koa": "^0.5.0",
-    "koa-logger": "^1.1.0",
-    "koa-route": "^1.0.2",
-    "swig": "^1.2.2",
-    "monk": "^0.8.1",
-    "co-monk": "^1.0.0"
+    "co": "^4.5.4",
+    "co-body": "^2.0.0",
+    "co-monk": "^1.0.0",
+    "co-views": "^1.0.0",
+    "koa": "^0.21.0",
+    "koa-logger": "^1.2.2",
+    "koa-route": "^2.4.2",
+    "monk": "^1.0.1",
+    "swig": "^1.4.2"
   },
   "devDependencies": {
     "mocha": "^2.2.5",
@@ -25,7 +25,8 @@
     "start": "node --harmony index.js"
   },
   "engines": {
-    "node": ">= 11.3"
+    "node": "0.12.2"
   },
+
   "license": "MIT"
 }

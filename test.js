@@ -14,7 +14,8 @@ describe('Blog with mongo:', function(){
 	var removeAll = function(done){
 		co(function *(){
 			yield posts.remove({});
-		})(done);
+			done();
+		});
 	};
 
 	beforeEach(function (done) {
@@ -45,7 +46,7 @@ describe('Blog with mongo:', function(){
 				.expect('Content-Type', /text/)
 				.expect(200)
 				.end(done);
-		})();
+		});
 	});
 
 	it('renders view page for a number of posts', function(done){
@@ -59,7 +60,7 @@ describe('Blog with mongo:', function(){
 				.expect('Content-Type', /text/)
 				.expect(200)
 				.end(done);
-		})();
+		});
 	});
 
 	it('updates an existing post', function(done){
@@ -72,7 +73,7 @@ describe('Blog with mongo:', function(){
 				.expect(302)
 				.expect('location', postUrl)
 				.end(done);
-		})();
+		});
 	});
 
 	it('deletes an existing post', function(done){
@@ -85,6 +86,6 @@ describe('Blog with mongo:', function(){
 				.expect(302)
 				.expect('location', '/')
 				.end(done);
-		})();
+		});
 	});
 });
